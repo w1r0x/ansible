@@ -1,4 +1,4 @@
-ansible (1.9.1-bingo) jessie; urgency=low
+ansible (1.9.1-bingo~1) jessie; urgency=low
 
   * 1.9.1 stable with some git options added
   * #12309
