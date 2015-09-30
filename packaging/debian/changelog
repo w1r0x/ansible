@@ -1,8 +1,9 @@
-ansible (%VERSION%-%RELEASE%~%DIST%) %DIST%; urgency=low
+ansible (1.9.1-bingo) jessie; urgency=low
 
-  * %VERSION% release
+  * 1.9.1 stable with some git options added
+  * #12309
 
- -- Ansible, Inc. <support@ansible.com>  %DATE%
+ -- Denis Ryabyy <vv1r0x@gmail.com>  Wed, 30 Sep 2015 10:24:00 +0300 
 
 ansible (1.9.3) unstable; urgency=low
 
