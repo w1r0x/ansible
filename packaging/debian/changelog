@@ -1,3 +1,15 @@
+ansible (1.9.1-bingo~3) jessie; urgency=low
+
+  * Add modules
+
+ -- Denis Ryabyy <vv1r0x@gmail.com>  Wed, 30 Sep 2015 11:35:25 +0300
+
+ansible (1.9.1-bingo~2) jessie; urgency=low
+
+  * Some minor fixes
+
+ -- Denis Ryabyy <vv1r0x@gmail.com>  Wed, 30 Sep 2015 10:41:00 +0300 
+
 ansible (1.9.1-bingo~1) jessie; urgency=low
 
   * 1.9.1 stable with some git options added
