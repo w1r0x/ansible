@@ -187,10 +187,10 @@ def main(args):
         if options.key_file:
             repo_opts += ' key_file=%s' % options.key_file
 
-        if self.options.gitforce:
+        if options.gitforce:
             repo_opts += ' force=yes'
 
-        if self.options.tracksubmodules:
+        if options.tracksubmodules:
             repo_opts += ' track_submodules=yes'
 
     path = utils.plugins.module_finder.find_plugin(options.module_name)
