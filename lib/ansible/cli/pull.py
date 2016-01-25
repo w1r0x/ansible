@@ -91,6 +91,11 @@ class PullCLI(CLI):
         self.parser.add_option('--verify-commit', dest='verify', default=False, action='store_true',
             help='verify GPG signature of checked out commit, if it fails abort running the playbook.'
                  ' This needs the corresponding VCS module to support such an operation')
+        self.parser.add_option('--git-force', dest='gitforce', default=False, action='store_true',
+            help='modified files in the working git repository will be discarded')
+        self.parser.add_option('--track-submodules', dest='tracksubmodules', default=False, action='store_true',
+            help='submodules will track the latest commit on their master branch (or other branch specified in .gitmodules).'
+                 ' This is equivalent to specifying the --remote flag to git submodule update')
 
         self.options, self.args = self.parser.parse_args(self.args[1:])
 
@@ -157,9 +162,14 @@ class PullCLI(CLI):
             if self.options.verify:
                 repo_opts += ' verify_commit=yes'
 
+            if self.options.gitforce:
+                repo_opts += ' force=yes'
+
+            if self.options.tracksubmodules:
+                repo_opts += ' track_submodules=yes'
+
             if not self.options.fullclone:
                 repo_opts += ' depth=1'
-
 
         path = module_loader.find_plugin(self.options.module_name)
         if path is None:
